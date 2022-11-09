@@ -1,6 +1,7 @@
 <template>
     <button
         class="button"
+        :class="{ 'button--wide' : isWide }"
         @click="onClick"
     >
         {{ label }}
@@ -30,6 +31,10 @@ function onClick () {
     background: #0084ff;
     color: #fff;
     transition: all .3s ease-in-out;
+
+    &--wide {
+        width: 100%;
+    }
 
     @media (min-width: 1024px) {
         cursor: pointer;
